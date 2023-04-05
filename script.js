@@ -26,11 +26,14 @@ if (getComputerChoice < 0.34) {
 }
 console.log("The computer chooses " + `${getComputerChoice}`);
 
-//Declare Winner
-const winner = declareWinner(getPlayerChoice, getComputerChoice);
+// Play round and Declare Winner
 
+const playerSelection = getPlayerChoice;
+const computerSelection = getComputerChoice;
+const winner = declareWinner(playerSelection, computerSelection);
+    
 function declareWinner(getPlayerChoice, getComputerChoice) {
-    if (getPlayerChoice === "rock" && getComputerChoice === "scissors") {
+    if (getPlayerChoice === "rock" && getComputerChoice === "scissors"){
         console.log("You win! Rock beats scissors!");
     }else if (getPlayerChoice === "rock" && getComputerChoice === "rock"){
         console.log("It's a tie! You both chose rock.");
@@ -42,20 +45,13 @@ function declareWinner(getPlayerChoice, getComputerChoice) {
         console.log("You win! Paper beats rock!");
     }else if (getPlayerChoice === "paper" && getComputerChoice === "scissors"){
         console.log("You lose! Scissors beats paper!");
-    }else if (getPlayerChoice === "scissors" && getComputerChoice === "scissors"){
-        console.log("It's a tie! You both chose scissors.");
     }else if (getPlayerChoice === "scissors" && getComputerChoice === "paper"){
         console.log("You win! Scissors beats paper!");
-    }else (getPlayerChoice === "scissors" && getComputerChoice === "rock"){
+    }else if (getPlayerChoice === "scissors" && getComputerChoice === "rock"){
         console.log("You lose! Rock beats scissors!");
+    }else { (getPlayerChoice === "scissors"&& getComputerChoice === "scissors")
+        console.log("It's a tie! You both chose scissors.");   
     }
-    }
+}
 
-    
-console.log(winner);
-
-
-
-
-
-
+ function game(declareWinner,declareWinner,declareWinner,declareWinner,declareWinner);
